@@ -1,0 +1,32 @@
+LICE EXPERIENCE ULTRA
+HTML + CSS + JavaScript puro
+Sem React. Sem npm. Sem instalação.
+
+COMO ABRIR
+1. Extraia o ZIP.
+2. Abra index.html.
+3. Funciona direto no navegador.
+
+FOTOS
+Coloque na pasta images:
+foto-01.jpg
+foto-02.jpg
+foto-03.jpg
+
+INTERAÇÕES
+- Tela Agent Select / Lock In
+- Round Start
+- Partículas Canvas reagindo ao mouse
+- Parallax / tilt
+- Botões magnéticos
+- Mini-map ping
+- Aim Lab com 5 alvos
+- ACE ao completar
+- Spike planted + hold to defuse
+- Cards de memória arrastáveis
+- Livro interativo com páginas
+- Anime sky com shooting stars
+- Final "hold to unlock"
+- HUD e glitches
+
+Tudo foi feito offline em HTML/CSS/JS puro.

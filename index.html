@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <meta name="description" content="Uma experiência interativa feita para Maria Alice.">
+  <title>LICE // EXPERIENCE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="fxCanvas" aria-hidden="true"></canvas>
+
+  <div id="cursor" class="cursor"><span></span></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="boot" id="boot">
+    <div class="boot-grid"></div>
+    <div class="boot-card">
+      <div class="boot-top">
+        <span>VAL // PERSONAL EXPERIENCE</span>
+        <span class="status-online">ONLINE</span>
+      </div>
+      <div class="agent-frame">
+        <div class="agent-symbol">L</div>
+        <div class="agent-lines"></div>
+      </div>
+      <p class="micro">AGENT SELECT</p>
+      <h1>MARIA ALICE</h1>
+      <h2>“LICE FOFUCHA”</h2>
+      <p class="boot-copy">Uma experiência feita só pra você. Sem tutorial. Só explora.</p>
+      <button id="lockIn" class="lock-button">
+        <span>LOCK IN</span>
+        <i>→</i>
+      </button>
+      <p class="hint">mouse • scroll • clique • segure • arraste</p>
+    </div>
+  </div>
+
+  <div class="top-progress"><span id="scrollProgress"></span></div>
+
+  <header class="hud">
+    <a href="#hero" class="hud-brand">LICE//01</a>
+    <nav>
+      <a href="#valorant">VALORANT</a>
+      <a href="#memorias">MEMÓRIAS</a>
+      <a href="#livro">LIVRO</a>
+      <a href="#final">FINAL</a>
+    </nav>
+    <div class="hud-right">
+      <span id="hudRound">ROUND 01</span>
+      <span class="dot"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-orbit orbit-a"></div>
+      <div class="hero-orbit orbit-b"></div>
+
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">FOR MARIA ALICE // 2026</p>
+        <h1>
+          NÃO É SÓ UM
+          <span>SITE.</span>
+        </h1>
+        <p class="hero-sub">
+          É um mapa feito com coisas que lembram você:
+          Valorant, histórias, anime, memórias e uma coisa que nenhum rank mede —
+          a sua presença.
+        </p>
+        <div class="hero-actions">
+          <a href="#valorant" class="cta magnetic">ENTRAR NA PARTIDA <span>↘</span></a>
+          <button class="ghost magnetic" id="pingBtn">PINGAR MAPA</button>
+        </div>
+      </div>
+
+      <div class="hero-side-card" data-tilt>
+        <div class="mini-map">
+          <span class="map-a">A</span>
+          <span class="map-b">B</span>
+          <span class="player-dot"></span>
+          <span class="map-path p1"></span>
+          <span class="map-path p2"></span>
+          <span class="map-path p3"></span>
+        </div>
+        <div class="side-meta">
+          <span>PLAYER</span>
+          <strong>LICE FOFUCHA</strong>
+          <small>STATUS // IMPOSSÍVEL DE IGNORAR</small>
+        </div>
+      </div>
+
+      <div class="scroll-tag">SCROLL TO CONTINUE ↓</div>
+    </section>
+
+    <section class="round-transition">
+      <span>ROUND 01</span>
+      <strong>VALORANT // MAS SOBRE VOCÊ</strong>
+    </section>
+
+    <section class="valorant section" id="valorant">
+      <div class="section-head" data-reveal>
+        <span class="index">01</span>
+        <div>
+          <p class="eyebrow">TACTICAL // EXPERIENCE</p>
+          <h2>Se a vida fosse um clutch, eu apostaria em você.</h2>
+        </div>
+      </div>
+
+      <div class="combat-grid">
+        <article class="combat-card" data-tilt data-reveal>
+          <span class="combat-code">01 // PRESENCE</span>
+          <h3>Presença</h3>
+          <p>Você tem aquele tipo de presença que muda o clima do lugar sem precisar pedir atenção.</p>
+          <div class="stat-line"><span></span></div>
+        </article>
+
+        <article class="combat-card" data-tilt data-reveal>
+          <span class="combat-code">02 // COURAGE</span>
+          <h3>Coragem</h3>
+          <p>Não a coragem de quem nunca sente medo. A de quem continua mesmo sentindo tudo.</p>
+          <div class="stat-line"><span></span></div>
+        </article>
+
+        <article class="combat-card" data-tilt data-reveal>
+          <span class="combat-code">03 // STRENGTH</span>
+          <h3>Força</h3>
+          <p>Uma força silenciosa. Daquelas que não precisam provar nada pra ninguém.</p>
+          <div class="stat-line"><span></span></div>
+        </article>
+      </div>
+
+      <div class="aim-lab" id="aimLab" data-reveal>
+        <div class="aim-hud">
+          <span>AIM LAB // LICE EDITION</span>
+          <span>HITS <b id="hitCount">0</b>/5</span>
+        </div>
+        <div class="aim-area" id="aimArea">
+          <button class="target t1" aria-label="alvo"></button>
+          <button class="target t2" aria-label="alvo"></button>
+          <button class="target t3" aria-label="alvo"></button>
+          <button class="target t4" aria-label="alvo"></button>
+          <button class="target t5" aria-label="alvo"></button>
+          <div class="crosshair-follow" id="crosshairFollow"><i></i><i></i><i></i><i></i></div>
+          <div class="ace-card" id="aceCard">
+            <span>ACE</span>
+            <p>5/5. Igual você: difícil de esquecer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spike-section">
+      <div class="spike-bg-word">SPIKE</div>
+      <div class="spike-console" data-reveal>
+        <div class="console-top">
+          <span>SPIKE PLANTED</span>
+          <b id="spikeClock">00:45</b>
+        </div>
+
+        <div class="spike-device">
+          <div class="spike-body">
+            <span class="spike-light"></span>
+            <i class="bar b1"></i>
+            <i class="bar b2"></i>
+            <i class="bar b3"></i>
+          </div>
+          <div class="pulse-ring r1"></div>
+          <div class="pulse-ring r2"></div>
+          <div class="pulse-ring r3"></div>
+        </div>
+
+        <div class="spike-text">
+          <p class="eyebrow">CLUTCH // MOMENT</p>
+          <h2>Tem rodada que parece perdida.</h2>
+          <p>
+            E mesmo assim você continua. É isso que eu admiro:
+            não parecer invencível — mas continuar sendo você.
+          </p>
+        </div>
+
+        <button class="defuse magnetic" id="defuseBtn">SEGURE PARA DESARMAR</button>
+        <div class="defuse-track"><span id="defuseFill"></span></div>
+        <p class="defuse-status" id="defuseStatus">STATUS // ARMED</p>
+      </div>
+    </section>
+
+    <section class="memories section" id="memorias">
+      <div class="section-head" data-reveal>
+        <span class="index">02</span>
+        <div>
+          <p class="eyebrow">DRAG // DROP // MEMORY</p>
+          <h2>Algumas memórias não ficam paradas.</h2>
+        </div>
+      </div>
+
+      <div class="memory-board" id="memoryBoard">
+        <article class="photo-card pc1 drag-card" style="--r:-7deg">
+          <div class="photo">
+            <img src="images/1.jpeg" alt="Foto da Maria Alice">
+            <span>foto-01.jpg</span>
+          </div>
+          <p>uma lembrança que merece ficar.</p>
+        </article>
+
+        <article class="photo-card pc2 drag-card" style="--r:5deg">
+          <div class="photo">
+            <img src="images/2.jpeg" alt="Foto da Maria Alice">
+            <span>foto-02.jpg</span>
+          </div>
+          <p>um daqueles dias simples.</p>
+        </article>
+
+        <article class="photo-card pc3 drag-card" style="--r:-2deg">
+          <div class="photo">
+            <img src="images//3.jpeg" alt="Foto da Maria Alice">
+            <span>foto-03.jpg</span>
+          </div>
+          <p>uma versão sua que eu gosto de guardar.</p>
+        </article>
+
+        <article class="quote-card drag-card qc1" style="--r:4deg">
+          <span>VOICE LINE 01</span>
+          <p>“Se eu pudesse escolher alguém pro meu time nos dias mais difíceis, seria você.”</p>
+        </article>
+
+        <article class="quote-card drag-card qc2" style="--r:-5deg">
+          <span>VOICE LINE 02</span>
+          <p>“Você tem algo que nenhum rank mede.”</p>
+        </article>
+
+        <div class="board-hint">ARRASTE OS CARDS ↔</div>
+      </div>
+    </section>
+
+    <section class="book-section section" id="livro">
+      <div class="section-head" data-reveal>
+        <span class="index">03</span>
+        <div>
+          <p class="eyebrow">BOOK MODE // INTERACTIVE</p>
+          <h2>Se isso fosse um livro, essa página seria sua.</h2>
+        </div>
+      </div>
+
+      <div class="book-shell" data-reveal>
+        <div class="book-cover" id="bookCover">
+          <span>FOR</span>
+          <h3>MARIA<br>ALICE</h3>
+          <small>um capítulo que ainda está sendo escrito</small>
+          <button id="openBook">ABRIR LIVRO →</button>
+        </div>
+
+        <div class="book-pages" id="bookPages">
+          <article class="page page-1 active">
+            <span>01</span>
+            <h3>Novo ato.</h3>
+            <p>Todo aniversário parece começo de fase nova. Não apaga o que veio antes. Só prova que ainda tem muita história pela frente.</p>
+          </article>
+          <article class="page page-2">
+            <span>02</span>
+            <h3>Main character.</h3>
+            <p>Você não precisa diminuir quem é pra caber em lugar nenhum. Tem gente que entra em cena. Tem gente que muda a cena.</p>
+          </article>
+          <article class="page page-3">
+            <span>03</span>
+            <h3>Até o último segundo.</h3>
+            <p>Se um dia tudo parecer uma rodada difícil demais, lembra: eu apostaria em você até o último segundo.</p>
+          </article>
+
+          <div class="page-controls">
+            <button id="prevPage">←</button>
+            <span id="pageIndicator">01 / 03</span>
+            <button id="nextPage">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="anime-section">
+      <div class="anime-sky" id="animeSky">
+        <span class="moon"></span>
+        <span class="shoot s1"></span>
+        <span class="shoot s2"></span>
+        <span class="shoot s3"></span>
+      </div>
+      <div class="anime-copy" data-reveal>
+        <p class="eyebrow">INTERLUDE // ANIME MODE</p>
+        <h2>Tem gente que entra na história <em>e muda a temporada inteira.</em></h2>
+        <p>
+          Eu poderia falar da sua força o site inteiro.
+          Mas você é muito mais que isso: suas manias, seus gostos,
+          suas histórias, o jeito que você ri, as coisas que ama.
+        </p>
+      </div>
+    </section>
+
+    <section class="final section" id="final">
+      <div class="final-grid"></div>
+      <div class="section-head" data-reveal>
+        <span class="index">04</span>
+        <div>
+          <p class="eyebrow">MATCH POINT // FINAL</p>
+          <h2>Última rodada.</h2>
+        </div>
+      </div>
+
+      <div class="final-console" data-reveal>
+        <div class="final-left">
+          <span class="final-code">LOCKED // PERSONAL MESSAGE</span>
+          <h3>Maria Alice,<br><em>minha Lice Fofucha.</em></h3>
+          <p>Segura o botão até o fim. Sem soltar.</p>
+        </div>
+
+        <div class="final-right">
+          <button id="finalHold" class="final-hold">SEGURAR</button>
+          <div class="final-meter"><span id="finalMeter"></span></div>
+          <span class="meter-label" id="meterLabel">0%</span>
+        </div>
+      </div>
+
+      <div class="letter" id="letter">
+        <span class="letter-top">ACE // MESSAGE UNLOCKED</span>
+        <h3>Pra você.</h3>
+        <p>
+          Eu não queria te entregar só “feliz aniversário”.
+          Queria fazer uma coisa com a sua cara, misturar um pouco do que você gosta
+          com um pouco do que eu vejo quando penso em você.
+        </p>
+        <p>
+          Eu admiro muito a sua força, mas admiro também tudo que existe além dela:
+          seu jeito, suas manias, seus gostos, sua presença e a forma como você marca quem está perto.
+        </p>
+        <p>
+          Espero que esse novo ciclo tenha dias leves, histórias boas, pessoas sinceras
+          e muitos momentos em que você esqueça qualquer coisa ruim e só consiga pensar:
+          “caraca, a vida também sabe ser bonita.”
+        </p>
+        <p class="letter-last">E se um dia tudo parecer uma rodada impossível: eu apostaria em você até o último segundo.</p>
+        <strong>— João</strong>
+      </div>
+    </section>
+  </main>
+
+  <div class="round-overlay" id="roundOverlay">
+    <span>ROUND START</span>
+    <strong>LICE // EXPERIENCE</strong>
+  </div>
+
+  <div class="ace-overlay" id="aceOverlay">
+    <div class="ace-lines"></div>
+    <span>ACE</span>
+    <small>MARIA ALICE</small>
+  </div>
+
+  <div class="ping" id="ping"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
